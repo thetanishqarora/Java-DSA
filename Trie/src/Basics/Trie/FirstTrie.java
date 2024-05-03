@@ -1,5 +1,7 @@
 package Basics.Trie;
 
+import java.util.Arrays;
+
 public class FirstTrie {
 
     static class TrieNode {
@@ -33,5 +35,7 @@ public class FirstTrie {
             insert(word);
         }
         System.out.println(search("their"));
+        TrieNode curr = root;
+
     }
 }
