@@ -28,7 +28,7 @@ public class PrefixProblem {
             System.out.println(prefix);
             return;
         }
-        for(int i = 0 ; i < root.children.length ; i++){
+        for(int i = 0 ; i < root.children.length /*26*/; i++){
             if(root.children[i]!=null)
                 findPrefix(root.children[i], prefix + (char)(i + 'a'));
         }
