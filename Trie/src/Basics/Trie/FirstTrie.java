@@ -23,9 +23,8 @@ public class FirstTrie {
     public static boolean search(String word){
         TrieNode curr = root;
         for(char c : word.toCharArray()){
-            if(curr.children[c - 'a'] != null){
-                curr = curr.children[c - 'a'];
-            } else return false;
+            if(curr.children[c - 'a'] == null) return false;
+            curr = curr.children[c - 'a'];
         }
         return curr.isEnd;
     }
@@ -34,7 +33,7 @@ public class FirstTrie {
         for (String word : words) {
             insert(word);
         }
-        System.out.println(search("their"));
+        System.out.println(search("the"));
         TrieNode curr = root;
 
     }
